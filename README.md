@@ -331,7 +331,101 @@ PLINK 분석에는 별도 실행 파일과
 - 결과를 재현하고 다시 검토할 수 있도록 문서화합니다.
 
 ---
+---
+
+## 🩻 Brain MRI — 3D 시각화 및 부피 측정
+
+**DICOM·NIfTI 기반 MRI 데이터를 불러와 2D 슬라이스와
+마스크 기반 3D 모델을 확인하는 연구용 웹 프로토타입입니다.**
+
+> MRI 로딩 → 전처리 → 마스크 처리 → 부피 계산 → 3D 메시 생성 → 시각화·보고서
+
+NeuroAge-MAS의 표 형식 데이터 분석과 별도로,
+원본 의료영상의 로딩과 시각화 과정을 다루는 프로젝트입니다.
+
+### 🛠️ 사용 기술
+
+| 분야 | 기술 및 활용 |
+|---|---|
+| Language | Python, JavaScript, HTML/CSS |
+| Web Application | Streamlit, Python 표준 라이브러리 기반 HTTP 서버 |
+| Medical Image I/O | pydicom, NiBabel |
+| Data Processing | NumPy, Pandas, SciPy |
+| Image Processing | scikit-image |
+| Visualization | Matplotlib, Plotly, Three.js |
+| 3D Mesh | Marching Cubes, trimesh, GLB·STL 내보내기 |
+| Reports | ReportLab 기반 PDF 생성 |
+| Optional Integration | HD-BET, SynthSeg 등 외부 도구 실행 연계 |
+
+### 상세 구현
+
+#### 1. MRI 데이터 로딩
+
+- DICOM 시리즈 탐색 및 볼륨 구성
+- NIfTI 영상과 마스크 로딩
+- 영상 배열·affine·voxel spacing·메타데이터 관리
+- NIfTI 방향 표준화 및 분석용 데이터 저장
+
+#### 2. 전처리 및 2D 뷰어
+
+- 백분위수 기반 영상 강도 클리핑·정규화
+- Axial·Coronal·Sagittal 슬라이스 추출
+- 마스크 오버레이 시각화
+- 브라우저에서 슬라이스와 처리 상태 확인
+
+#### 3. 뇌 마스크 처리 및 상태 점검
+
+- 뇌 추출 도구 실행 연계와 결과 마스크 로딩
+- 마스크 연결 요소·경계 접촉 등 품질 진단
+- 신뢰 가능한 처리 결과와 임계값 기반 디버그 결과 구분
+- 마스크 상태에 따른 최종 3D 생성 제한
+
+#### 4. 마스크·영역별 부피 계산
+
+- 마스크 voxel 수와 실제 voxel 크기를 이용한 부피 계산
+- 영역 labelmap 로딩 및 영역별 부피 집계
+- 영역별 부피 결과 CSV 내보내기
+
+**부피(cm³) = 마스크 voxel 수 × voxel 부피(mm³) ÷ 1,000**
+
+부피 결과는 입력 마스크와 spacing 정보의 정확성에 영향을 받습니다.
+
+#### 5. 3D 메시 생성
+
+- Marching Cubes 기반 표면 추출
+- 다운샘플링·평활화 및 메시 후처리
+- 연결 요소와 메시 품질 점검
+- GLB·STL 형식 내보내기
+- Three.js·Plotly 기반 브라우저 시각화
+
+#### 6. 결과 출력
+
+- 슬라이스·마스크 오버레이 이미지 생성
+- 부피 및 처리 결과 정리
+- ReportLab 기반 PDF 보고서 생성
+
+### 주요 코드
+
+| 파일 | 역할 |
+|---|---|
+| `mri_loader.py` | DICOM·NIfTI 로딩 및 영상 정보 관리 |
+| `preprocessing.py` | 강도 정규화 및 슬라이스 추출 |
+| `brain_mask.py` | 뇌 마스크 생성·보정 |
+| `skull_stripping.py` | 뇌 추출 처리 |
+| `region_segmentation.py` | 외부 영역 분할 연계·labelmap 처리·부피 집계 |
+| `mesh_builder.py` | 3D 메시 생성·후처리·내보내기 |
+| `backend/server.py` | 웹 요청 및 영상 처리 기능 연결 |
+| `report.py` | PDF 보고서 생성 |
+
+### 구현 범위
+
+- HD-BET·SynthSeg 연계는 외부 도구 설치와 실행 조건이 필요합니다.
+- 밝기 임계값 기반 후보 영역은 종양을 확정하는 AI 모델과 구분합니다.
+- 뇌 추출 마스크와 병변 마스크는 서로 다른 분석 대상으로 구분합니다.
+- README의 설계 목표와 실제 구현 기술을 구분하여 기록합니다.
+- 연구·포트폴리오용 프로토타입으로, 진단이나 치료 효과 판정에 사용하지 않습니다.
+
 
 ## 🧑‍💻 Contact Me
 
-[![GitHub](https://img.shields.io/badge/GitHub-junhaj27--jpg-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/junhaj27-jpg)
+[![GitHub](https://img.shields.io/badge/GitHub-junhaj27--jpg-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/junhaj27-jpg) 🔗 [Repository](https://github.com/junhaj27-jpg/mri)
