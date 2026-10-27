@@ -1,16 +1,24 @@
-## Hi there 👋
+# 안녕하세요, 정준하입니다 👋
 
-<!--
-**junhaj27-jpg/junhaj27-jpg** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+의료·헬스케어 데이터를 활용한 분석과 AI 서비스 개발에 관심이 있습니다.
 
-Here are some ideas to get you started:
+## 관심 분야
+- 임상·뇌 MRI 데이터를 활용한 뇌 나이 예측
+- XGBoost 및 머신러닝 모델 비교·평가
+- 의료기기 시판 후 감시(PMS) 및 품질관리
+- 데이터 분석 결과를 보여주는 웹 서비스
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 프로젝트 경험
+- 뇌 MRI 영역별 체적을 활용한 뇌 나이 예측 프로젝트
+- 임상·영상·유전체 데이터를 결합하는 모델 구조 탐색
+- 의료기기 PMS 업무 관리 기능 개발
+
+## 목표 직무
+- 헬스케어 데이터 분석가
+- 의료 AI 개발자
+- 의료기기 QA·PMS 및 RA 담당자
+
+## 기술 및 도구
+Python · XGBoost · Git · GitHub
+
+※ 프로젝트별 구현 범위와 검증 결과는 각 저장소에 정리합니다.
