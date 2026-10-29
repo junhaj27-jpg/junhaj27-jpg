@@ -8,52 +8,123 @@ LLM 기반 에이전트와 데이터 분석을 활용해 실제 업무에 도움
 
 **NeuroAge-MAS**에서는 뇌 체적·임상·유전체 자료의 입력 검증부터 모델 비교, 연구 결과 검토와 보고서 생성까지 연결하는 연구용 플랫폼을 개발하고 있습니다.
 
-또한 **MedWatch PMS**를 통해 의료기기 시판 후 관리 업무를, **Brain MRI 프로토타입**을 통해 의료영상의 로딩·마스크 처리·부피 계산·3D 시각화를 다루고 있습니다.
+또한 **MedWatch PMS**를 통해 의료기기 시판 후 관리 업무를, **Brain MRI** 프로젝트를 통해 의료영상 로딩·마스크 처리·부피 계산·3D 시각화를 다루고 있습니다.
 
-제가 관심을 두는 것은 **입력의 근거와 처리 과정을 확인하고, 결과를 재현하고 다시 검토할 수 있는 구조**입니다.
+입력 데이터의 근거와 처리 과정을 확인하고, 결과를 재현하고 다시 검토할 수 있는 구조를 만드는 데 관심이 있습니다.
 
 ---
 
 ## 🛠️ Tech Stacks
 
-참여·개발 프로젝트에서 사용하는 기술입니다. 팀 프로젝트 전체 기술과 개인 담당 범위, 기본 기능과 선택적 실험 경로는 각 프로젝트 설명에서 구분합니다.
+참여·개발 프로젝트에서 사용하는 기술입니다.  
+팀 프로젝트 전체 기술과 개인 담당 범위, 기본 기능과 선택적 실험은 각 프로젝트 설명에서 구분합니다.
 
-| 분야 | 기술 |
-|---|---|
-| **Languages** | Python · TypeScript · JavaScript · SQL · HTML · CSS |
-| **AI / ML & Data** | scikit-learn · XGBoost · Pandas · NumPy · SciPy |
-| **Agent & Workflow** | LLM 기반 구조화 생성 · LangGraph 기반 워크플로 연동 · 요구사항 추적 |
-| **Backend** | FastAPI · Django · Django REST Framework · Pydantic |
-| **Frontend & Dashboard** | React · Vite · Streamlit · Chart.js |
-| **Database** | SQLite · PostgreSQL |
-| **Visualization** | Matplotlib · Altair · Plotly · Three.js |
-| **Medical Image** | pydicom · NiBabel · scikit-image · trimesh |
-| **Reports** | ReportLab · python-docx · HTML · Markdown |
-| **Tools & Quality** | Git · GitHub · GitHub Actions · pytest · Ruff · Docker |
+### 💻 Languages
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
+
+### 🧠 AI / ML & Data
+
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=for-the-badge)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
+
+### 🤖 Agent & Workflow
+
+![LLM Agents](https://img.shields.io/badge/LLM_Agents-6D28D9?style=for-the-badge)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langgraph&logoColor=white)
+![Evidence Retrieval](https://img.shields.io/badge/Evidence_Retrieval-0F766E?style=for-the-badge)
+![Structured Output](https://img.shields.io/badge/Structured_Output-475569?style=for-the-badge&logo=json&logoColor=white)
+
+### ⚙️ Backend
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Django REST Framework](https://img.shields.io/badge/Django_REST_Framework-A30000?style=for-the-badge&logo=django&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+
+### 🖥️ Frontend & Dashboard
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
+
+### 📊 Visualization
+
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Altair](https://img.shields.io/badge/Altair-1F77B4?style=for-the-badge)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+
+### 🩻 Medical Image
+
+![pydicom](https://img.shields.io/badge/pydicom-3776AB?style=for-the-badge)
+![NiBabel](https://img.shields.io/badge/NiBabel-4C72B0?style=for-the-badge)
+![scikit-image](https://img.shields.io/badge/scikit--image-F7931E?style=for-the-badge)
+![trimesh](https://img.shields.io/badge/trimesh-00897B?style=for-the-badge)
+
+### 🗄️ Database
+
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+
+### 📄 Reports
+
+![ReportLab](https://img.shields.io/badge/ReportLab-003B7A?style=for-the-badge)
+![python-docx](https://img.shields.io/badge/python--docx-2B579A?style=for-the-badge)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+
+### 🔧 Tools & Quality
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=for-the-badge&logo=ruff&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ---
 
 ## 🚀 Projects
 
+| 프로젝트 | 주요 내용 | 담당·개발 범위 |
+|---|---|---|
+| **ALPLED** | 멀티 에이전트 기반 개발 문서 자동화 | 통합시험 시나리오 생성 에이전트 |
+| **NeuroAge-MAS** | 뇌 체적·임상·유전체 연구 플랫폼 | 입력 검증·분석·모델 비교·연구 검토 흐름 |
+| **MedWatch PMS** | 의료기기 시판 후 안전관리 | 사건 중심 업무·권한·규정 근거·추적성 |
+| **Brain MRI** | 의료영상 시각화·부피 측정 | 영상 로딩·마스크 처리·3D 메시·보고서 |
+
+---
+
 ## 🤖 ALPLED
 
 ### 멀티 에이전트 기반 AI-DLC 문서 생성 자동화 플랫폼
 
-**팀 프로젝트 · 개인 담당: 통합시험 시나리오 생성 에이전트**
+**팀 프로젝트 · 담당: 통합시험 시나리오 생성 에이전트**
 
 제안요청서와 회의록을 바탕으로 요구사항·설계·테스트 등 6종 소프트웨어 개발 산출물을 생성하는 플랫폼입니다.
 
 반복적인 문서 작성을 자동화하고, 산출물 사이의 연결 관계와 정합성을 관리하는 프로젝트에 참여했습니다.
 
-### 담당한 문제
+### 🎯 담당한 문제
 
 요구사항을 시험 시나리오로 변환하는 과정에서는 요구사항 누락, 참조 정보 부족, 불완전한 JSON 응답, 시험 절차와 설명의 불일치가 발생할 수 있습니다.
 
-이를 다루기 위해 **입력 검증 → 단계별 생성 → 요구사항 연결 확인 → 출력 정규화 → 경고·오류 반환**으로 이어지는 `TestScenarioGenerationAgent`를 개발했습니다.
+이를 다루기 위해 다음 흐름의 `TestScenarioGenerationAgent`를 개발했습니다.
+
+**입력 검증 → 단계별 생성 → 요구사항 연결 확인 → 출력 정규화 → 경고·오류 반환**
 
 ### 주요 구현
 
-**입력 검증과 전처리**
+#### 입력 검증과 전처리
 
 - 산출물 코드 `TS`와 실행 모드 검증
 - `udt_yn`을 기준으로 신규 생성·수정 흐름 분리
@@ -61,7 +132,7 @@ LLM 기반 에이전트와 데이터 분석을 활용해 실제 업무에 도움
 - 기능 요구사항 필터링과 LLM 전달용 입력 압축
 - 필수 입력 누락 시 오류 코드와 실패 상태 반환
 
-**단계별 생성 파이프라인**
+#### 단계별 생성 파이프라인
 
 1. 기능 요구사항 기반 시험 시나리오 생성
 2. 요구사항 ID 연결 누락 확인과 시나리오 보완
@@ -70,19 +141,19 @@ LLM 기반 에이전트와 데이터 분석을 활용해 실제 업무에 도움
 5. 인터페이스 참조 기반 상세 절차 생성
 6. 확정된 최종 절차를 기준으로 설명 요약 생성
 
-상세 절차를 먼저 확정하고 요약을 생성하여, 최종 시험 절차와 설명이 서로 어긋나는 문제를 줄이도록 구성했습니다.
+상세 절차를 확정한 뒤 요약을 생성하여, 요약과 최종 시험 절차의 불일치를 줄이도록 구성했습니다.
 
-**요구사항 추적**
+#### 요구사항 추적
 
 - `source_requirement_ids`로 원본 요구사항과 시나리오 연결
-- 입력 요구사항 ID와 생성 결과 ID 비교
+- 입력 요구사항과 생성 결과의 ID 비교
 - 연결되지 않은 요구사항에 대한 시나리오 보완
 - 보완 내용을 경고 정보로 기록
 - 테스트 케이스까지 요구사항 추적 정보 전달
 
-요구사항 ID가 연결됐다는 사실과 시험 내용이 충분하다는 판단은 구분합니다.
+요구사항 ID 연결 여부와 시험 내용의 충분성은 구분하여 검토합니다.
 
-**구조화 출력과 실패 대응**
+#### 구조화 출력과 오류 대응
 
 - 시나리오·케이스·절차·상세 정보를 JSON 목록으로 구성
 - 공통 `LLMClient`와 병렬 호출 유틸리티 활용
@@ -91,7 +162,7 @@ LLM 기반 에이전트와 데이터 분석을 활용해 실제 업무에 도움
 - 경고와 오류를 구분해 후속 검토 지원
 - 실제 시험 전 `test_result`를 `None`으로 유지
 
-**공통 워크플로 연동**
+#### 공통 워크플로 연동
 
 - `WorkflowState`에서 선행 에이전트 출력 참조
 - `agent_outputs`에 생성 결과 저장
@@ -113,7 +184,7 @@ LLM 기반 에이전트와 데이터 분석을 활용해 실제 업무에 도움
 
 `Python` · `LangGraph` · `FastAPI` · `Django` · `Qwen` · `vLLM` · `Qdrant` · `MySQL` · `SQLAlchemy`
 
-위 기술은 팀 프로젝트 전체 구성입니다. 개인 담당 영역은 **통합시험 시나리오 생성 에이전트**입니다.
+> 위 기술은 팀 프로젝트 전체 구성입니다. 개인 담당 영역은 통합시험 시나리오 생성 에이전트입니다.
 
 ---
 
@@ -125,11 +196,11 @@ LLM 기반 에이전트와 데이터 분석을 활용해 실제 업무에 도움
 
 **입력 검증 → 데이터 처리 → 분석·모델 비교 → 정합성 검사 → 내부 검토 → 보고서 생성**
 
-### 해결하려는 문제
+### 🎯 해결하려는 문제
 
-연구 데이터는 단위, 방문 시점, 결측 코드, 대상자 식별 기준이 서로 다를 수 있습니다. 이러한 차이를 확인하지 않으면 데이터 연결이나 모델 평가 결과를 잘못 해석할 수 있습니다.
+연구 데이터는 단위, 방문 시점, 결측 코드와 대상자 식별 기준이 서로 다를 수 있습니다.
 
-입력 계약과 연결 근거를 확인하고, 실행 설정과 결과를 기록하여 **분석 가능한 범위와 추가 확인이 필요한 부분을 함께 보여주는 구조**를 개발하고 있습니다.
+입력 계약과 데이터 연결 근거를 확인하고 실행 설정과 결과를 기록하여, 분석 가능한 범위와 추가 확인이 필요한 부분을 함께 보여주는 구조를 개발하고 있습니다.
 
 ### 주요 기능
 
@@ -204,7 +275,8 @@ PLINK 분석에는 별도 실행 파일과 검증된 입력·대상자 매핑·�
 | Quality | pytest · FastAPI TestClient · Ruff · pytest-cov · pip-audit |
 | Development | GitHub Actions · Dev Container · Vite build |
 
-### 선택적 실험과 구현 범위
+<details>
+<summary><b>선택적 실험과 결과 해석 범위</b></summary>
 
 - SHAP·Optuna·ComBat·PyTorch 실험은 의존성과 설정 조건에 따라 사용합니다.
 - PyTorch MLP와 CPU 기반 FedAvg는 선택적 실험 경로입니다.
@@ -213,8 +285,11 @@ PLINK 분석에는 별도 실행 파일과 검증된 입력·대상자 매핑·�
 - 외부 LLM 설명 연동과 PostgreSQL 기반 분산 운영은 현재 구현 범위와 구분합니다.
 - 원본 MRI의 분할·정합과 3D CNN 학습은 현재 플랫폼 범위에 포함하지 않습니다.
 - 뇌 나이 실험은 실제 나이 라벨·촬영 시점·입력 근거를 충족해야 하는 별도 경로입니다.
+- 합성 자료·교육용 자료·실제 자료를 구분합니다.
+- 합성 실험 결과를 실제 환자 성능이나 의료적 효과로 해석하지 않습니다.
+- 내부 연구 승인은 임상적 유효성 검증이나 규제 승인을 의미하지 않습니다.
 
-합성 자료·교육용 자료·실제 자료를 구분하며, 합성 실험 결과를 실제 환자 성능이나 의료적 효과로 해석하지 않습니다. 내부 연구 승인은 임상적 유효성 검증이나 규제 승인을 의미하지 않습니다.
+</details>
 
 ---
 
@@ -222,17 +297,17 @@ PLINK 분석에는 별도 실행 파일과 검증된 입력·대상자 매핑·�
 
 ### 의료기기 시판 후 안전관리·리콜 업무 지원 시스템
 
-[🔗 Repository](https://github.com/junhaj27-jpg/medical-divice-pms)
+[![Repository](https://img.shields.io/badge/GitHub-medical--divice--pms-181717?style=flat-square&logo=github)](https://github.com/junhaj27-jpg/medical-divice-pms)
 
 의료기기 출시 후 발생하는 고객 불만, 이상사례, 위험평가, CAPA, 규제보고 검토와 리콜을 사건 단위로 연결하는 RA·QA 포트폴리오 프로젝트입니다.
 
 **불만 접수 → 이상사례 판단 → 위험평가 → CAPA → 규제보고 검토 → 리콜 검토 → 승인 → 조치 완료·종료**
 
-### 해결하려는 문제
+### 🎯 해결하려는 문제
 
 업무가 개별 기록으로 분리되면 담당자, 판단 근거, 승인 당시 자료와 후속 조치를 함께 확인하기 어렵습니다.
 
-이를 사건 중심으로 연결하고, **누가 어떤 자료를 근거로 판단했는지 추적할 수 있는 업무 흐름**을 구현하고 있습니다.
+이를 사건 중심으로 연결하고, 누가 어떤 자료를 근거로 판단했는지 추적할 수 있는 업무 흐름을 구현하고 있습니다.
 
 ### 주요 개발 내용
 
@@ -287,9 +362,15 @@ PLINK 분석에는 별도 실행 파일과 검증된 입력·대상자 매핑·�
 
 ### 기술 구성
 
-`Python` · `Django` · `Django REST Framework` · `SQLite` · `PostgreSQL` · `Django Template` · `Chart.js` · `pypdf` · `ReportLab` · `Docker` · `GitHub Actions`
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+![DRF](https://img.shields.io/badge/DRF-A30000?style=flat-square)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-### 고도화 목표
+### 🚧 고도화 목표
 
 | 항목 | 개발 방향 |
 |---|---|
@@ -309,7 +390,7 @@ PLINK 분석에는 별도 실행 파일과 검증된 입력·대상자 매핑·�
 
 ### MRI 3D 시각화·마스크 기반 부피 측정 프로토타입
 
-[🔗 Repository](https://github.com/junhaj27-jpg/mri)
+[![Repository](https://img.shields.io/badge/GitHub-mri-181717?style=flat-square&logo=github)](https://github.com/junhaj27-jpg/mri)
 
 DICOM·NIfTI 기반 MRI 데이터를 불러와 2D 슬라이스와 마스크 기반 3D 모델을 확인하는 연구용 웹 프로토타입입니다.
 
@@ -359,7 +440,18 @@ NeuroAge-MAS의 표 형식 연구 분석과 별도로, 원본 의료영상의 �
 - Three.js·Plotly 기반 시각화
 - 슬라이스·마스크·부피 결과를 포함한 PDF 생성
 
-### 주요 코드
+### 기술 구성
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![pydicom](https://img.shields.io/badge/pydicom-3776AB?style=flat-square)
+![NiBabel](https://img.shields.io/badge/NiBabel-4C72B0?style=flat-square)
+![scikit-image](https://img.shields.io/badge/scikit--image-F7931E?style=flat-square)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
+
+<details>
+<summary><b>주요 코드와 구현 범위</b></summary>
 
 | 파일 | 역할 |
 |---|---|
@@ -372,16 +464,12 @@ NeuroAge-MAS의 표 형식 연구 분석과 별도로, 원본 의료영상의 �
 | `backend/server.py` | 웹 요청과 영상 처리 연결 |
 | `report.py` | PDF 보고서 생성 |
 
-### 기술 구성
-
-`Python` · `JavaScript` · `Streamlit` · `pydicom` · `NiBabel` · `NumPy` · `SciPy` · `scikit-image` · `Matplotlib` · `Plotly` · `Three.js` · `trimesh` · `ReportLab`
-
-### 구현 범위
-
 - HD-BET·SynthSeg 연계에는 외부 도구 설치와 실행 조건이 필요합니다.
 - 밝기 임계값 기반 후보 영역은 종양을 확정하는 AI 모델과 구분합니다.
 - 뇌 추출 마스크와 병변 마스크를 별도 분석 대상으로 취급합니다.
 - 연구·포트폴리오용 프로토타입이며 진단이나 치료 효과 판정에 사용하지 않습니다.
+
+</details>
 
 ---
 
@@ -399,23 +487,12 @@ NeuroAge-MAS의 표 형식 연구 분석과 별도로, 원본 의료영상의 �
 
 ## 🧪 How I Work
 
-### 요구사항을 확인합니다
-기능을 구현하기 전에 해결할 문제, 입력 조건, 완료 기준을 정리합니다.
-
-### 연결 관계를 남깁니다
-요구사항과 테스트, 데이터와 분석 결과, 판단과 근거를 연결합니다.
-
-### 실패를 구분합니다
-입력 오류, 처리 실패, 근거 부족, 미검증 상태를 구분해 표시합니다.
-
-### 실행해서 확인합니다
-AI가 생성한 코드와 문서는 테스트·실행·검토를 거쳐 확인합니다.
-
-### 기여와 결과를 정확하게 설명합니다
-팀 전체 성과와 개인 담당 범위, 구현 기능과 개발 목표, 예시 실험과 실제 데이터 결과를 구분합니다.
-
-### 다시 검토할 수 있게 만듭니다
-실행 설정, 입력 근거, 변경 이력과 결과를 기록하고 문서화합니다.
+- **요구사항 확인** — 해결할 문제, 입력 조건과 완료 기준을 먼저 정리합니다.
+- **추적성 확보** — 요구사항과 테스트, 데이터와 결과, 판단과 근거를 연결합니다.
+- **실패 구분** — 입력 오류, 처리 실패, 근거 부족과 미검증 상태를 구분합니다.
+- **실행과 검토** — AI가 생성한 코드와 문서를 테스트·실행·검토로 확인합니다.
+- **기여 범위 명시** — 팀 전체 성과와 개인 담당 역할을 구분합니다.
+- **재현성 관리** — 실행 설정, 입력 근거, 변경 이력과 결과를 기록합니다.
 
 ---
 
@@ -433,16 +510,16 @@ AI가 생성한 코드와 문서는 테스트·실행·검토를 거쳐 확인�
 
 ## 💼 Career Interests
 
-- **AI 에이전트·LLM 응용 서비스 개발**
-- **헬스케어 데이터 분석과 연구 지원 도구**
-- **의료 AI 연구·개발**
-- **의료기기 QA·PMS 업무 자동화**
-- **규정과 근거를 연결하는 업무 지원 시스템**
+**AI 에이전트·LLM 응용 서비스 개발**  
+**헬스케어 데이터 분석·연구 지원 도구**  
+**의료 AI 연구·개발**  
+**의료기기 QA·PMS 업무 자동화**  
+**규정과 근거를 연결하는 업무 지원 시스템**
 
 ---
 
 ## 🧑‍💻 Contact
 
-[![GitHub](https://img.shields.io/badge/GitHub-junhaj27--jpg-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/junhaj27-jpg)
+[![GitHub](https://img.shields.io/badge/GitHub-junhaj27--jpg-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/junhaj27-jpg)
 
 프로젝트의 구현 과정과 검증 기록을 GitHub에 정리하고 있습니다.
